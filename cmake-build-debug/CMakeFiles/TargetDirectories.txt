@@ -1,0 +1,3 @@
+C:/Users/furka/Masaüstü/GitHub/CMPE252-LAB4-Q1/cmake-build-debug/CMakeFiles/CMPE252_LAB4_Q1.dir
+C:/Users/furka/Masaüstü/GitHub/CMPE252-LAB4-Q1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/furka/Masaüstü/GitHub/CMPE252-LAB4-Q1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

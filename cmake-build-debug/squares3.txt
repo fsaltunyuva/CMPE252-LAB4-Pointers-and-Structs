@@ -1,0 +1,5 @@
+square 1 1 1
+square 2 2 2
+square 3 3 3
+square 4 4 4
+square 4 4 5
