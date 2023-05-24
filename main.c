@@ -118,9 +118,10 @@ void printShape(const square_t *objp){
 void centerDistance(const point_t *ptp, const square_t *objp){
     double x1 = ptp->x;
     double y1 = ptp->y;
-    double x2 = objp->bottom_left_corner.x + ((objp->bottom_right_corner.x - objp->bottom_left_corner.x)/2);
-    double y2 = objp->bottom_right_corner.y + ((objp->upper_right_corner.y - objp->upper_right_corner.y)/2);
-
+    //double x2 = objp->bottom_left_corner.x + ((objp->bottom_right_corner.x - objp->bottom_left_corner.x)/2);
+    //double y2 = objp->bottom_right_corner.y + ((objp->upper_right_corner.y - objp->upper_right_corner.y)/2);
+    double x2 = (objp->bottom_left_corner.x + objp->bottom_right_corner.x + objp->upper_left_corner.x + objp->upper_right_corner.x)/4;
+    double y2 = (objp->bottom_left_corner.y + objp->bottom_right_corner.y + objp->upper_left_corner.y + objp->upper_right_corner.y)/4;
     double result = sqrt(pow(x1-x2, 2) + pow(y1-y2, 2));
 
     printf("%.2lf \n", result);
