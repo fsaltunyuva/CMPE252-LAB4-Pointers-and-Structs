@@ -37,6 +37,14 @@ int main()
         printShape(&shapes[i]);
 
     }
+    point_t pt;
+    printf("\nEnter x and y coordinate of the point: ");
+    scanf("%lf %lf",&pt.x,&pt.y);
+    printf("\nCenter distances are:\n");
+    for (int i = 0; i < numOfShapes; i++) {
+        printf("Square %d: ",i +1);
+        centerDistance(&pt,&shapes[i]);
+    }
     return 0;
 }
 static int currentLine = 0;
@@ -105,5 +113,16 @@ void printShape(const square_t *objp){
     printf("<%.2lf %.2lf> <%.2lf %.2lf> <%.2lf %.2lf> <%.2lf %.2lf> <%.2lf> \n",
            objp->bottom_left_corner.x, objp->bottom_left_corner.y, objp->bottom_right_corner.x, objp->bottom_right_corner.y, objp->upper_left_corner.x,
            objp->upper_left_corner.y, objp->upper_right_corner.x, objp->upper_right_corner.y, objp->side);
+}
+
+void centerDistance(const point_t *ptp, const square_t *objp){
+    double x1 = ptp->x;
+    double y1 = ptp->y;
+    double x2 = objp->bottom_left_corner.x + ((objp->bottom_right_corner.x - objp->bottom_left_corner.x)/2);
+    double y2 = objp->bottom_right_corner.y + ((objp->upper_right_corner.y - objp->upper_right_corner.y)/2);
+
+    double result = sqrt(pow(x1-x2, 2) + pow(y1-y2, 2));
+
+    printf("%.2lf \n", result);
 }
 
